@@ -1,0 +1,23 @@
+{
+  "name": "wiki-reader",
+  "version": "0.0.0",
+  "description": "MediaWiki wiki reader web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CephalonScientia/wiki-reader.git"
+  },
+  "keywords": [
+    "wiki",
+    "reader"
+  ],
+  "author": "Scientia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CephalonScientia/wiki-reader/issues"
+  },
+  "homepage": "https://github.com/CephalonScientia/wiki-reader#readme"
+}
