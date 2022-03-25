@@ -1,23 +1,41 @@
 {
   "name": "wiki-reader",
-  "version": "0.0.0",
   "description": "MediaWiki wiki reader web app",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CephalonScientia/wiki-reader.git"
-  },
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "main": "src",
   "keywords": [
-    "wiki",
-    "reader"
+    "feathers"
   ],
-  "author": "Scientia",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/CephalonScientia/wiki-reader/issues"
+  "author": {
+    "name": "Scientia",
+    "email": "scientia4wiki@gmail.com"
   },
-  "homepage": "https://github.com/CephalonScientia/wiki-reader#readme"
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^17.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run compile && npm run jest",
+    "lint": "eslint src/. test/. --config .eslintrc.json --ext .ts --fix",
+    "dev": "ts-node-dev --no-notify src/",
+    "start": "npm run compile && node lib/",
+    "jest": "jest --forceExit",
+    "compile": "shx rm -rf lib/ && tsc"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": []
+  },
+  "types": "lib/"
 }
