@@ -2,22 +2,16 @@
   "name": "wiki-reader",
   "description": "MediaWiki wiki reader web app",
   "version": "0.0.0",
-  "homepage": "",
+  "homepage": "https://github.com/CephalonScientia/wiki-reader#readme",
   "private": true,
   "main": "src",
   "keywords": [
     "feathers"
   ],
-  "author": {
-    "name": "Scientia",
-    "email": "scientia4wiki@gmail.com"
-  },
+  "author": "Scientia <scientia4wiki@gmail.com>",
   "contributors": [],
-  "bugs": {},
   "directories": {
-    "lib": "src",
-    "test": "test/",
-    "config": "config/"
+    "test": "test"
   },
   "engines": {
     "node": "^17.0.0",
@@ -37,5 +31,30 @@
     ],
     "ignore": []
   },
-  "types": "lib/"
+  "types": "lib/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CephalonScientia/wiki-reader.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CephalonScientia/wiki-reader/issues"
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^4.5.12",
+    "@feathersjs/express": "^4.5.12",
+    "@feathersjs/feathers": "^4.5.12",
+    "@feathersjs/socketio": "^4.5.13",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "helmet": "^5.0.2",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/cors": "^2.8.12",
+    "@types/serve-favicon": "^2.5.3",
+    "shx": "^0.3.4"
+  }
 }
