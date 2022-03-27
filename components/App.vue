@@ -1,5 +1,22 @@
+<!-- Main app view -->
+<script>
+import Header from './Header.vue'
+import Navbar from './Navbar.vue'
+import Article from './Article.vue'
+
+export default {
+  components: {
+    Header,
+    Navbar,
+    Article
+  }
+}
+</script>
+
 <template>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <div>
+    <Header />
+    <Navbar />
+    <Article />
+  </div>
 </template>
