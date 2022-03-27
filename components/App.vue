@@ -3,12 +3,17 @@
 import Header from './Header.vue'
 import Navbar from './Navbar.vue'
 import Article from './Article.vue'
+import Footer from './Footer.vue'
 
 export default {
   components: {
     Header,
     Navbar,
-    Article
+    Article,
+    Footer,
+  },
+  mounted() {
+    console.log('Wiki endpoint: ', this.$config.wikiEndpoint)
   }
 }
 </script>
@@ -18,5 +23,6 @@ export default {
     <Header />
     <Navbar />
     <Article />
+    <Footer />
   </div>
 </template>
