@@ -6,6 +6,12 @@
 # install dependencies
 $ npm install
 
+# ensure Node.js v16 is used
+$ node --version
+$ npm install -g n # install Node.js version management
+$ n 16
+$ node --version
+
 # serve with hot reload at localhost:3000
 $ npm run dev
 
