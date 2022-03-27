@@ -6,10 +6,10 @@
 # install dependencies
 $ npm install
 
-# ensure Node.js v16 is used
+# ensure Node.js v16.14.2 (LTS) is used
 $ node --version
 $ npm install -g n # install Node.js version management
-$ n 16
+$ n 16.14.2  # set to v16.14.2
 $ node --version
 
 # serve with hot reload at localhost:3000
