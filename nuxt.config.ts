@@ -1,4 +1,6 @@
-export default {
+import { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -39,7 +41,7 @@ export default {
     wikiName: process.env.WIKI_NAME || 'English Wikipedia',
     wikiArticleLicense: process.env.WIKI_ARTICLE_LICENSE || 'CC BY-SA 3.0',
     wikiLicenseUrl: process.env.WIKI_LICENSE_URL || 'https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License',
-    
+
     // App settings
     appName: process.env.APP_NAME || '[PH] Wiki Reader',
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
@@ -66,3 +68,5 @@ export default {
   build: {
   }
 }
+
+export default config

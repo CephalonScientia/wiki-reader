@@ -13,8 +13,8 @@ export default {
     Footer,
   },
   mounted() {
-    console.log('Wiki endpoint: ', this.$config.wikiEndpoint)
-  }
+    console.log('On mount, this is the wiki name:', this.$config.wikiName)
+  },
 }
 </script>
 
