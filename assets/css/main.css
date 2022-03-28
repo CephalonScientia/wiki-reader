@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base HTML tag styles */
+@layer base {
+  h1 {
+    @apply text-2xl text-center text-base;
+    font-family: 'Roboto Slab', monospace;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  body {
+    @apply h-2;
+    padding: 2.5% 7.5%;
+    font-family: 'Rubik', monospace, helvetica;
+    line-height: 1.4;
+    color: var(--text-color);
+    background: var(--main-background);
+  }
+
+  button {
+    @apply bg-green-300 font-bold py-2 px-4 rounded;
+    color: var(--text-color);
+    background-color: var(--main-background);
+  }
+
+  button:hover {
+    @apply bg-green-500 cursor-pointer;
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  /* Avoiding color change when visited since transition property does not target pseudo-classes */
+  a:visited {
+    color: var(--link-color);
+  }
+
+  article {
+    @apply flex flex-col items-center justify-center pt-5 text-left;
+  }
+}
+
+/* Component classes that modify base HTML elements */
+@layer components {
+  #theme-switcher {
+    @apply text-xl;
+  }
+
+  #search-bar {
+    @apply text-center p-2;
+  }
+
+  #search-bar > input {
+    @apply text-center w-1/2 p-1 rounded-2xl border-green-200;
+  }
+
+  body.light-theme {
+    --text-color: #000000;
+    --main-background: #f2f2f2; /* #f0f8ff or aliceblue could also work for light theme*/
+    --link-color: #0600cb;
+  }
+}
+
+@layer utilities {
+  /* Note that span elements cannot be animated or transformed */
+  .spin {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* For smoother color transition between themes */
+  body, button, a {
+    transition-property: color, background-color;
+    transition-duration: 0.4s;
+    /* quintic function for lower downtime between text color and background switching */
+    transition-timing-function: cubic-bezier(.86, 0, .07, 1);
+  }
+
+  /* Let dark theme be default theme */
+  @variants dark {
+    .body.dark-theme {
+      --text-color: #e3e3e3;  /* #ffffff is slightly harsh so toning down */
+      --main-background: #292929;
+      --link-color: #3EE6B6;
+    }
+  }
+}
