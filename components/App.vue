@@ -1,21 +1,16 @@
 <!-- Main app view -->
 <script>
-import Header from './Header.vue'
-import Navbar from './Navbar.vue'
-import Article from './Article.vue'
-import Footer from './Footer.vue'
+import Header from "./Header.vue";
+import Navbar from "./Navbar.vue";
+import Article from "./Article.vue";
+import Footer from "./Footer.vue";
 
 export default {
-  components: {
-    Header,
-    Navbar,
-    Article,
-    Footer,
-  },
+  components: { Header, Navbar, Article, Footer },
   mounted() {
-    console.log('Wiki endpoint: ', this.$config.wikiEndpoint)
-  }
-}
+    console.log("Wiki endpoint: ", this.$config.wikiEndpoint);
+  },
+};
 </script>
 
 <template>
