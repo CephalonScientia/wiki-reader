@@ -14,7 +14,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   // Required to lint *.vue files
-  plugins: ["vue"],
+  plugins: ["vue", "tailwindcss"],
   // Add your custom rules here
   rules: {
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
