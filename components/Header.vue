@@ -6,7 +6,7 @@ export default {
 
 <template>
   <header>
-    <h1 class="flex flex-col items-center justify-center pt-5 text-center">
+    <h1>
       <a :href="$config.wikiEndpoint" target="_blank" rel="noopener noreferrer" title="Open link in new tab">
         {{ $config.wikiName }} Reader
       </a>

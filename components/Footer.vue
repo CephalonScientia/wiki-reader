@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
+  <footer>
     <div class="sm:flex sm:items-center sm:justify-between">
       <span class="self-center text-xl font-medium whitespace-nowrap dark:text-white">Wiki Reader</span>
       <ul class="flex flex-wrap items-center mb-6 sm:mb-0">

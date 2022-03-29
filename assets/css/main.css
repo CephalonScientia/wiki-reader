@@ -2,10 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~/assets/fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf') format('truetype');
+}
+
 /* Base HTML tag styles */
 @layer base {
+  /* TODO Establish a color pallete for light theme so far:
+    Light-theme pallete (different tints of green)
+    #DEE5E5 platinum
+    #9DC5BB opal
+    #17B890 mountain meadow
+    #5E807F steel teal
+    #082D0F dark green
+  */
+  :root {
+    --text-color: #000000;
+    --main-background: #f2f2f2; /* #f0f8ff or aliceblue could also work for light theme*/
+    --link-color: #0600cb;
+    /* Dark theme #ffffff is slightly harsh for text-color so toning down
+      --text-color: #e3e3e3;
+      --main-background: #292929;
+      --link-color: #3EE6B6;
+    */
+  }
+
   h1 {
-    @apply text-2xl text-center text-base;
+    @apply text-center text-base;
     font-family: 'Roboto Slab', monospace;
   }
 
@@ -23,13 +50,13 @@
   }
 
   button {
-    @apply bg-green-300 font-bold py-2 px-4 rounded;
+    @apply font-bold py-2 px-4 rounded;
     color: var(--text-color);
     background-color: var(--main-background);
   }
 
   button:hover {
-    @apply bg-green-500 cursor-pointer;
+    @apply cursor-pointer;
   }
 
   a {
@@ -41,8 +68,16 @@
     color: var(--link-color);
   }
 
+  header {
+    @apply flex flex-col items-center justify-center pt-5 text-center;
+  }
+
   article {
-    @apply flex flex-col items-center justify-center pt-5 text-left;
+    @apply flex flex-col items-center justify-center pt-5 pb-5 text-left;
+  }
+
+  footer {
+    @apply p-4 bg-white rounded-lg shadow md:px-6 md:py-8;
   }
 }
 
@@ -59,12 +94,6 @@
   #search-bar > input {
     @apply text-center w-1/2 p-1 rounded-2xl border-green-200;
   }
-
-  body.light-theme {
-    --text-color: #000000;
-    --main-background: #f2f2f2; /* #f0f8ff or aliceblue could also work for light theme*/
-    --link-color: #0600cb;
-  }
 }
 
 @layer utilities {
@@ -78,7 +107,7 @@
 
   @keyframes spin {
     from {
-      transform: rotate(0deg);
+      @apply rotate-0;
     }
     to {
       transform: rotate(360deg);
@@ -91,14 +120,5 @@
     transition-duration: 0.4s;
     /* quintic function for lower downtime between text color and background switching */
     transition-timing-function: cubic-bezier(.86, 0, .07, 1);
-  }
-
-  /* Let dark theme be default theme */
-  @variants dark {
-    .body.dark-theme {
-      --text-color: #e3e3e3;  /* #ffffff is slightly harsh so toning down */
-      --main-background: #292929;
-      --link-color: #3EE6B6;
-    }
   }
 }
