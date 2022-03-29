@@ -23,6 +23,7 @@
   :root {
     --text-color: #000000;
     --main-background: #f2f2f2; /* #f0f8ff or aliceblue could also work for light theme*/
+    --foreground: #eeeeee;
     --link-color: #0600cb;
     /* Dark theme #ffffff is slightly harsh for text-color so toning down
       --text-color: #e3e3e3;
@@ -32,7 +33,7 @@
   }
 
   h1 {
-    @apply text-center text-base;
+    @apply text-2xl text-center;
     font-family: 'Roboto Slab', monospace;
   }
 
@@ -73,11 +74,13 @@
   }
 
   article {
-    @apply flex flex-col items-center justify-center pt-5 pb-5 text-left;
+    @apply flex flex-col items-center justify-center rounded-lg shadow-lg pt-5 pb-5 mt-8 mb-8 text-left;
+    background: var(--foreground);
   }
 
   footer {
-    @apply p-4 bg-white rounded-lg shadow md:px-6 md:py-8;
+    @apply p-4 rounded-lg shadow-lg md:px-6 md:py-8;
+    background: var(--foreground);
   }
 }
 
@@ -92,7 +95,7 @@
   }
 
   #search-bar > input {
-    @apply text-center w-1/2 p-1 rounded-2xl border-green-200;
+    @apply text-center w-1/2 p-1 rounded-2xl shadow-lg;
   }
 }
 
