@@ -24,7 +24,7 @@ export default {
         </li>
       </ul>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <hr class="my-6 border-gray-500 sm:mx-auto lg:my-8" />
     <span class="block text">
       Text contents from wiki articles are licensed under
       <a :href="$config.wikiLicenseUrl">{{ $config.wikiArticleLicense }}</a> unless otherwise specified.
